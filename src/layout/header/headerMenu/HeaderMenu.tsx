@@ -10,7 +10,9 @@ function HeaderMenu(props: HeaderMenuPropsType) {
     <StyledHeaderMenu>
       <ul>
         {props.menuItems.map((item, id) => {
-          return <li key={id}>{item}</li>
+          return <li key={id}>
+            <Link href="">{item}</Link>
+            </li>
         })}
       </ul>
     </StyledHeaderMenu>
@@ -22,6 +24,11 @@ export default HeaderMenu;
 const StyledHeaderMenu = styled.nav`
   ul {
     display: flex;
-    gap: 20px;
+    gap: 60px;
   }
+`
+
+const Link = styled.a`
+  font-size: 18px;
+  font-weight: 700;
 `
