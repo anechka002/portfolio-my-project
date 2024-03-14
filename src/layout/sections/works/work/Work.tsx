@@ -8,20 +8,13 @@ export type WorksPropsType = {
 function Work(props: WorksPropsType) {
   return (
     <StyledWork>
-      <ImgWrapper>
         <Image src={props.src}/>
         <Title>InVersion</Title>
-      </ImgWrapper>
     </StyledWork>
   )
 }
 
 export default Work;
-
-const StyledWork = styled.div`
-  max-width: 555px;
-  width: 100%;
-`
 
 const Title = styled.p`
   opacity: 0;
@@ -32,10 +25,16 @@ const Title = styled.p`
 
   font-size: 40px;
   font-weight: 700;
-
 `
-const ImgWrapper = styled.div`
+
+const StyledWork = styled.div`
+  width: 555px;
+  flex-grow: 1;
   position: relative;
+
+  &:nth-child(odd) {
+    transform: translateY(-140px)
+  }
 
   &:hover {
     &::before {
@@ -47,7 +46,6 @@ const ImgWrapper = styled.div`
       bottom: 0;
       background-color: rgba(0, 0, 0, 0.6);
       border-radius: 4px;
-      margin-top: 24px;
     }
     ${Title} {
       opacity: 1;
@@ -60,5 +58,4 @@ const Image = styled.img`
   height: 888px;
   object-fit: cover;
   border-radius: 4px;
-  margin-top: 24px;
 `

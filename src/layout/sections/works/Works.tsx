@@ -12,7 +12,7 @@ function Works() {
   return (
     <StyledWorks>
       <Container>
-        <FlexWrapper wrap='wrap' justify='space-between'>
+        <FlexWrapper wrap='wrap' justify='space-between' gap='16px'>
           <Work src={proj1}/>
           <Work src={proj2}/>
           <Work src={proj3}/>
@@ -25,6 +25,4 @@ function Works() {
 
 export default Works;
 
-const StyledWorks = styled.section`
-  
-`
+const StyledWorks = styled.section``
