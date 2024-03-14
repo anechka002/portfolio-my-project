@@ -12,7 +12,7 @@ function Projects() {
     <StyledProjects>
       <Container>
         <SectionTitle>Personal Projects</SectionTitle>
-        <FlexWrapper wrap='wrap' justify='space-between'>
+        <FlexWrapper wrap='wrap' justify='space-between' gap='16px'>
           <ImgWrapper>
             <StyledImg src={image_01}/>
           </ImgWrapper>
@@ -35,8 +35,9 @@ const StyledProjects = styled.section`
 `
 
 const ImgWrapper = styled.div`
-  max-width: 360px;
-  width: 100%;
+  width: 300px;
+  flex-grow: 1;
+  /* aspect-ratio: 1 / 1; */
 `
 const StyledImg = styled.img`
   width: 100%;
@@ -44,5 +45,4 @@ const StyledImg = styled.img`
   object-fit: cover;
   border-radius: 4px;
   margin-top: 24px;
-  /* margin-bottom: 240px; */
 `
