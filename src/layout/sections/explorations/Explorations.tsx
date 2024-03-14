@@ -15,7 +15,7 @@ function Explorations() {
     <StyledExplorations>
       <Container>
         <SectionTitle>Visual Explorations</SectionTitle>
-        <FlexWrapper wrap='wrap' justify='space-between'>
+        <FlexWrapper wrap='wrap' justify='space-between' gap='16px'>
           <ImgWrapper>
             <StyledImg src={img_1}/>
           </ImgWrapper>
@@ -47,14 +47,14 @@ const StyledExplorations = styled.section`
 `
 
 const ImgWrapper = styled.div`
-  max-width: 360px;
-  width: 100%;
+  width: 300px;
+  flex-grow: 1;
+  aspect-ratio: 1 / 1;
 `
 
 const StyledImg = styled.img`
   width: 100%;
-  height: 408px;
+  height: 100%;
   object-fit: cover;
   border-radius: 4px;
-  margin-top: 24px;
 `
