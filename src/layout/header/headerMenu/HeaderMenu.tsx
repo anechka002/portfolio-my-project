@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { theme } from '../../../styles/Theme';
 
 type HeaderMenuPropsType = {
   menuItems: Array<string>
@@ -26,9 +27,17 @@ const StyledHeaderMenu = styled.nav`
     display: flex;
     gap: 60px;
   }
+
+  @media ${theme.media.mobile} {
+    display: none;
+  }
 `
 
 const Link = styled.a`
   font-size: 18px;
   font-weight: 700;
+
+  &:hover {
+    color: ${theme.colors.iconColor};
+  }
 `
