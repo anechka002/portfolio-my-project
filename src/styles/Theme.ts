@@ -6,5 +6,11 @@ export const theme = {
     font: '#DEDEDE',
 
     iconColor: '#959595',
+  },
+
+  media: {
+    tablet: 'screen and (max-width: 768px)',
+    mobile: 'screen and (max-width: 576px)',
   }
+
 }
