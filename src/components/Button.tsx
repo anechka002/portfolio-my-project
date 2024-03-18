@@ -28,4 +28,13 @@ export const Button = styled.button`
     width: 21px;
     height: 16px;
   }
+
+  @media screen and (max-width: 949px) {
+    margin: 0 auto;
+  }
+  
+  @media ${theme.media.mobile} {
+    width: 242px;
+    margin: 0 auto;
+  }
 `
