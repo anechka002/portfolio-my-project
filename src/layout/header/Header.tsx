@@ -10,6 +10,7 @@ import MobileMenu from './mobileMenu/MobileMenu';
 const items = ['Home', 'Work', 'Contact']
 
 function Header() {
+  console.log(1)
   return (
     <StyledHeader>
       <Container>
