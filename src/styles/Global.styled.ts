@@ -19,6 +19,8 @@ export const GlobalStyled = createGlobalStyle`
   -moz-osx-font-smoothing: grayscale;
   color: ${theme.colors.font};
   letter-spacing: -0.5px;
+
+  min-width: 360px;
   }
 
   ul {

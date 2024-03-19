@@ -9,7 +9,7 @@ function Footer() {
   return (
     <StyledFooter>
       <Container>
-        <FlexWrapper justify='space-between' align='center' wrap='wrap-reverse'>
+        <FlexWrapper justify='space-between' align='center' wrap='wrap-reverse' gap='35px'>
           <Copyright>Made by <span>Your Name</span> — Copyright 2021</Copyright>
           <SocialList>
             <SocialItem>
@@ -65,11 +65,19 @@ const Copyright = styled.small`
   span {
     color: #ECECEC;
   }
+
+  @media screen and (max-width: 611px) {
+    margin: 0 auto;
+  }
 `
 
 const SocialList = styled.ul`
   display: flex;
   gap: 40px;
+
+  @media screen and (max-width: 611px) {
+    margin: 0 auto;
+  }
 `
 
 const SocialItem = styled.li``

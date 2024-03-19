@@ -5,6 +5,7 @@ import { FlexWrapper } from '../../components/FlexWrapper';
 import Logo from '../../components/logo/Logo';
 import { Container } from '../../components/Container';
 import { theme } from '../../styles/Theme';
+import MobileMenu from './mobileMenu/MobileMenu';
 
 const items = ['Home', 'Work', 'Contact']
 
@@ -18,6 +19,7 @@ function Header() {
             <StyledText>Logo Here</StyledText>
           </StyledLogo>
           <HeaderMenu menuItems={items}/>
+          <MobileMenu menuItems={items}/>
         </FlexWrapper>
       </Container>
     </StyledHeader>

@@ -90,6 +90,7 @@ const Photo = styled.img`
   @media screen and (max-width: 1054px){
     margin: 0 auto;
   }
+
   @media ${theme.media.mobile} {
     width: 240px;
     height: 240px;
