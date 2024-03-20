@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { theme } from "../../../styles/Theme"
 
 // Works
 const Works = styled.section``
@@ -37,6 +38,12 @@ const Work = styled.div`
     }
     ${Title} {
       opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 1155px) {
+    &:nth-child(odd) {
+      transform: none
     }
   }
 `

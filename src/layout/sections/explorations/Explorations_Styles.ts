@@ -1,7 +1,12 @@
 import styled from "styled-components"
+import { theme } from "../../../styles/Theme"
 
 const Explorations = styled.section`
   padding-top: 240px;
+
+  @media ${theme.media.mobile} {
+    padding-top: 115px;
+  }
 `
 
 const ImgWrapper = styled.div`

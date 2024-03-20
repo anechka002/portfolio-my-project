@@ -4,6 +4,10 @@ import { font } from "../../../styles/Common"
 
 const Contact = styled.section`
   padding: 240px 0 125px;
+
+  @media ${theme.media.mobile} {
+    padding-top: 200px;
+  }
 `
 
 const Text = styled.p`
@@ -19,6 +23,7 @@ const Text = styled.p`
     font-weight: 500;
   }
 `
+
 export const S = {
   Contact,
   Text

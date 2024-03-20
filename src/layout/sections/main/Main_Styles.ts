@@ -8,6 +8,10 @@ const Main = styled.section`
   padding: 150px 0 218px;
 
   position: relative;
+  
+  @media ${theme.media.mobile} {
+    padding-bottom: 40px;
+  }
 `
 
 const Box = styled.div`
