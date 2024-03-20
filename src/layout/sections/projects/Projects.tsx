@@ -2,9 +2,9 @@ import React from 'react';
 import { Container } from '../../../components/Container';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { FlexWrapper } from '../../../components/FlexWrapper';
-import image_01 from '../../../assets/images/01.jpeg';
-import image_02 from '../../../assets/images/02.jpeg';
-import image_03 from '../../../assets/images/03.jpeg';
+import image_01 from '../../../assets/images/projects/01.jpeg';
+import image_02 from '../../../assets/images/projects/02.jpeg';
+import image_03 from '../../../assets/images/projects/03.jpeg';
 import {S} from './Project_Styles';
 
 const imageItems = [

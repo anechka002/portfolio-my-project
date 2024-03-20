@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
 
             {socialItemsData.map((s, index) => {
               return (
-                <S.SocialItem>
+                <S.SocialItem key={index}>
                   <S.SocialLink>
                     <Icon width={s.width} height={s.height} viewBox={s.viewBox} iconId={s.iconId}/>
                   </S.SocialLink>

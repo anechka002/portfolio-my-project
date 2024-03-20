@@ -14,6 +14,7 @@ const ImgWrapper = styled.div`
   flex-grow: 1;
   aspect-ratio: 1 / 1;
 `
+
 const StyledImg = styled.img`
   width: 100%;
   height: 560px;

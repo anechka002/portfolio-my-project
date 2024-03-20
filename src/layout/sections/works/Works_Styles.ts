@@ -1,5 +1,4 @@
-import styled from "styled-components"
-import { theme } from "../../../styles/Theme"
+import styled from "styled-components";
 
 // Works
 const Works = styled.section``

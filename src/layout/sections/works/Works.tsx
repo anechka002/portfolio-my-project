@@ -1,8 +1,8 @@
 import React from 'react';
-import proj1 from '../../../assets/images/proj-1.jpeg';
-import proj2 from '../../../assets/images/proj-2.jpeg';
-import proj3 from '../../../assets/images/proj-3.jpeg';
-import proj4 from '../../../assets/images/proj-4.jpeg';
+import proj1 from '../../../assets/images/works/proj-1.jpeg';
+import proj2 from '../../../assets/images/works/proj-2.jpeg';
+import proj3 from '../../../assets/images/works/proj-3.jpeg';
+import proj4 from '../../../assets/images/works/proj-4.jpeg';
 import { Container } from '../../../components/Container';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import Work from './work/Work';
