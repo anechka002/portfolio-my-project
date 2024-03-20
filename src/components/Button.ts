@@ -16,6 +16,7 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   gap: 16px;
+  transition: .2s linear;
   
   &:hover {
     background-color: ${theme.colors.secondaryBg};

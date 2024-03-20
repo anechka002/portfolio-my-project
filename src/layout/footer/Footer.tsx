@@ -1,91 +1,66 @@
 import React from 'react'
-import styled from 'styled-components';
-import { theme } from '../../styles/Theme';
 import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import Icon from '../../components/icon/Icon';
+import {S} from './Footer_Styles'
 
-function Footer() {
+const socialItemsData = [
+  {
+    width: '22',
+    height: '22',
+    viewBox: '0 0 22 22',
+    iconId: 'whatsApp'
+  },
+  {
+    width: '22',
+    height: '22',
+    viewBox: '0 0 22 22',
+    iconId: 'dribbble'
+  },
+  {
+    width: '22',
+    height: '22',
+    viewBox: '0 0 22 22',
+    iconId: 'linkedin'
+  },
+  {
+    width: '27',
+    height: '22',
+    viewBox: '0 0 27 22',
+    iconId: 'twitter'
+  },
+  {
+    width: '29',
+    height: '18',
+    viewBox: '0 0 29 18',
+    iconId: 'behance'
+  },
+
+]
+
+const Footer: React.FC = () => {
   return (
-    <StyledFooter>
+    <S.Footer>
       <Container>
         <FlexWrapper justify='space-between' align='center' wrap='wrap-reverse' gap='35px'>
-          <Copyright>Made by <span>Your Name</span> — Copyright 2021</Copyright>
-          <SocialList>
-            <SocialItem>
-              <SocialLink>
-                <Icon iconId='whatsApp'/>
-              </SocialLink>
-            </SocialItem>
-          
-            <SocialItem>
-              <SocialLink>
-                <Icon iconId='dribbble'/>
-              </SocialLink>
-            </SocialItem>
-          
-            <SocialItem>
-              <SocialLink>
-                <Icon iconId='linkedin'/>
-              </SocialLink>
-            </SocialItem>
-          
-            <SocialItem>
-              <SocialLink>
-                <Icon iconId='twitter' width='27px' height='22px' viewBox='0 0 27px 22px'/>
-              </SocialLink>
-            </SocialItem>
-          
-            <SocialItem>
-              <SocialLink>
-                <Icon iconId='behance' width='29px' height='18px' viewBox='0 0 29px 18px'/>
-              </SocialLink>
-            </SocialItem>
-          </SocialList>
+          <S.Copyright>Made by <span>Your Name</span> — Copyright 2021</S.Copyright>
+          <S.SocialList>
+
+            {socialItemsData.map((s, index) => {
+              return (
+                <S.SocialItem>
+                  <S.SocialLink>
+                    <Icon width={s.width} height={s.height} viewBox={s.viewBox} iconId={s.iconId}/>
+                  </S.SocialLink>
+                </S.SocialItem>
+              )
+            })}
+
+          </S.SocialList>
         </FlexWrapper>
       </Container>
-    </StyledFooter>
+    </S.Footer>
   )
 }
 
 export default Footer;
-
-const StyledFooter = styled.footer`
-  background-color: ${theme.colors.primaryBg};
-  outline: 1px solid #696969;
-  padding: 50px 0 35px;
-`
-
-const Copyright = styled.small`
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 36px;
-  color: ${theme.colors.iconColor};
-
-  span {
-    color: #ECECEC;
-  }
-
-  @media screen and (max-width: 611px) {
-    margin: 0 auto;
-  }
-`
-
-const SocialList = styled.ul`
-  display: flex;
-  gap: 40px;
-
-  @media screen and (max-width: 611px) {
-    margin: 0 auto;
-  }
-`
-
-const SocialItem = styled.li``
-
-const SocialLink = styled.a`
-  color: ${theme.colors.iconColor};
-
-  &:hover {
-    color: ${theme.colors.font};
-  }
-`

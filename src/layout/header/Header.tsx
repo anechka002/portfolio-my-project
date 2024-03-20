@@ -1,49 +1,45 @@
-import React from 'react'
-import styled from 'styled-components';
-import HeaderMenu from './headerMenu/HeaderMenu';
+import React from 'react';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import Logo from '../../components/logo/Logo';
 import { Container } from '../../components/Container';
-import { theme } from '../../styles/Theme';
-import MobileMenu from './mobileMenu/MobileMenu';
+import MobileMenu from './headerMenu/mobileMenu/MobileMenu';
+import { S } from './Header_Styles';
+import DesktopMenu from './headerMenu/desktopMenu/DesktopMenu';
 
-const items = ['Home', 'Work', 'Contact']
+const items = ['Home', 'Work', 'Contact'];
 
-function Header() {
+export type HeaderMenuPropsType = {
+  menuItems: Array<string>;
+};
+
+const Header: React.FC = () => {
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 576;
+
+  React.useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleWindowResize);
+    return () => window.removeEventListener('resize', handleWindowResize);
+  }, []);
+
   return (
-    <StyledHeader>
+    <S.Header>
       <Container>
-        <FlexWrapper justify='space-between' align='center'>
-          <StyledLogo>
-            <Logo/>
-            <StyledText>Logo Here</StyledText>
-          </StyledLogo>
-          <HeaderMenu menuItems={items}/>
-          <MobileMenu menuItems={items}/>
+        <FlexWrapper justify="space-between" align="center">
+          <S.Logo>
+            <Logo />
+            <S.Text>Logo Here</S.Text>
+          </S.Logo>
+
+          {width < breakpoint ? (
+            <MobileMenu menuItems={items} />
+          ) : (
+            <DesktopMenu menuItems={items} />
+          )}
         </FlexWrapper>
       </Container>
-    </StyledHeader>
-  )
-}
+    </S.Header>
+  );
+};
 
 export default Header;
-
-const StyledHeader = styled.header`
-  background-color: ${theme.colors.secondaryBg};
-  padding: 20px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-`
-const StyledLogo = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`
-const StyledText = styled.h3`
-  font-size: 20px;
-  font-weight: 800;
-`
-
