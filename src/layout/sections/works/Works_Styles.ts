@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 // Works
-const Works = styled.section``
+const Works = styled.section`
+  position: relative;
+`
 
 // Work
 const Title = styled.p`

@@ -4,6 +4,8 @@ import { theme } from "../../../styles/Theme"
 const Explorations = styled.section`
   padding-top: 240px;
 
+  position: relative;
+
   @media ${theme.media.mobile} {
     padding-top: 115px;
   }

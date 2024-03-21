@@ -5,6 +5,8 @@ const Footer = styled.footer`
   background-color: ${theme.colors.primaryBg};
   outline: 1px solid #696969;
   padding: 50px 0 35px;
+
+  position: relative;
 `
 
 const Copyright = styled.small`

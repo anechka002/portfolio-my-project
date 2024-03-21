@@ -7,7 +7,7 @@ const Main = styled.section`
   display: flex;
   padding: 150px 0 218px;
 
-  position: relative;
+  /* position: relative; */
   
   @media ${theme.media.mobile} {
     padding-bottom: 40px;
