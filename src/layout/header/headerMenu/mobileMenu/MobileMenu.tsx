@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HeaderMenuPropsType } from '../../Header';
 import Menu from '../menu/Menu';
 import {S} from '../HeaderMenu_Styles'
@@ -6,12 +6,16 @@ import {S} from '../HeaderMenu_Styles'
 const MobileMenu: React.FC<HeaderMenuPropsType> = (
   props: HeaderMenuPropsType
 ) => {
+
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
+  const onBurgerBtnClick = () => {setMenuIsOpen( !menuIsOpen )}
+
   return (
     <S.MobileMenu>
-      <S.BurgerButton isOpen={false}>
+      <S.BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
         <span> </span>
       </S.BurgerButton>
-      <S.MobileMenuPopup isOpen={false}>
+      <S.MobileMenuPopup isOpen={menuIsOpen} onClick={ () => {setMenuIsOpen(false)} }>
         <Menu menuItems={props.menuItems} />
       </S.MobileMenuPopup>
     </S.MobileMenu>
