@@ -5,6 +5,7 @@ import photo from './../../../assets/images/photo.jpeg'
 import { Button } from '../../../components/Button';
 import Icon from '../../../components/icon/Icon';
 import {S} from './Main_Styles';
+import Typewriter from 'typewriter-effect';
 
 const Main: React.FC = () => {
   return (
@@ -13,7 +14,15 @@ const Main: React.FC = () => {
         <FlexWrapper align='center' justify='space-between' wrap='wrap-reverse' height='none' gap='20px'>
           <S.Box>
             <S.Name>Hi, I am Your Name A Product Designer based in City.</S.Name>
-            <S.MainTitle>I help businesses and companies reach their goals by designing user-centric digital products & interactive experiences.
+            <S.MainTitle>
+              <p>I help businesses and companies reach their goals by designing user-centric digital products & interactive experiences.</p>
+              <Typewriter
+                options={{
+                  strings: ['I help businesses and companies reach their goals by designing user-centric digital products & interactive experiences.'],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
             </S.MainTitle>
           </S.Box>
             <S.Photo src={photo} alt=''/> 

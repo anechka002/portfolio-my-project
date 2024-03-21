@@ -46,6 +46,10 @@ const MainTitle = styled.h1`
   color: ${theme.colors.iconColor};
   margin: 25px 0 90px;
 
+  p {
+    display: none;
+  }
+
   @media ${theme.media.mobile} {
     line-height: 26px;
     margin: 20px 0 50px;
