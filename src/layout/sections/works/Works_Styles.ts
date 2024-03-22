@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../../styles/Theme";
 
 // Works
 const Works = styled.section`
@@ -12,6 +13,7 @@ const Title = styled.p`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  transition: ${theme.animations.transition};
 
   font-size: 40px;
   font-weight: 700;
@@ -21,13 +23,13 @@ const Work = styled.div`
   width: 555px;
   flex-grow: 1;
   position: relative;
+  transition: 2s linear;
 
   &:nth-child(odd) {
     transform: translateY(-140px)
   }
 
-  &:hover {
-    &::before {
+  &::before {
       content: '';
       position: absolute;
       left: 0;
@@ -36,6 +38,13 @@ const Work = styled.div`
       bottom: 0;
       background-color: rgba(0, 0, 0, 0.6);
       border-radius: 4px;
+      opacity: 0;
+      transition: ${theme.animations.transition};
+    }
+
+  &:hover {
+    &::before {
+      opacity: 1;
     }
     ${Title} {
       opacity: 1;

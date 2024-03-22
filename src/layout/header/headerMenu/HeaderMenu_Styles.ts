@@ -7,9 +7,27 @@ import { Link } from "react-scroll";
 const NavLink = styled(Link)`
   font-size: 18px;
   font-weight: 700;
+  position: relative;
 
   &:hover, &.active {
     color: ${theme.colors.iconColor};
+
+    &::before {
+      background-color: ${theme.colors.iconColor};
+    }
+  }
+
+  &::before {
+    content: '';
+    display: inline-block;
+    height: 2px;
+
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transition: ${theme.animations.transition};
   }
 `
 // Mobile Menu
@@ -24,23 +42,29 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   bottom: 0;
   z-index: 99999;
   background-color: rgba(50, 50, 50, 0.7);
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: 1s linear;
+
+  ul {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s linear;
+  }
 
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      transform: translateY(0);
+      & ul {
+        gap: 60px;
+      }
     `}
-
-  ul {
-    display: flex;
-    gap: 60px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
 `;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`

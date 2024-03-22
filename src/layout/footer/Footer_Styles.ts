@@ -36,11 +36,19 @@ const SocialList = styled.ul`
 const SocialItem = styled.li``
 
 const SocialLink = styled.a`
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: ${theme.colors.iconColor};
-  transition: color .2s linear;
+  transition: ${theme.animations.transition};
 
   &:hover {
     color: ${theme.colors.font};
+    transform: translateY(-4px);
   }
 `
 export const S = {
