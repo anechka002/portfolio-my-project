@@ -9,6 +9,7 @@ import img_5 from '../../../assets/images/explorations/img_5.jpeg';
 import img_6 from '../../../assets/images/explorations/img_6.jpeg';
 import { SectionTitle } from '../../../components/SectionTitle';
 import {S} from './Explorations_Styles';
+import { Fade } from "react-awesome-reveal";
 
 const imgItemsData = [
   {
@@ -38,13 +39,15 @@ const Explorations: React.FC = () => {
         <SectionTitle>Visual Explorations</SectionTitle>
         <FlexWrapper wrap='wrap' justify='space-between' gap='16px'>
           
-          {imgItemsData.map((i, index) => {
-            return (
-              <S.ImgWrapper key={index}>
-                <S.StyledImg src={i.src}/>
-              </S.ImgWrapper>
-            )
-          })}
+          <Fade cascade={true} damping={0.2}>
+            {imgItemsData.map((i, index) => {
+              return (
+                <S.ImgWrapper key={index}>
+                  <S.StyledImg src={i.src}/>
+                </S.ImgWrapper>
+              )
+            })}
+          </Fade>
 
         </FlexWrapper>
       </Container>
