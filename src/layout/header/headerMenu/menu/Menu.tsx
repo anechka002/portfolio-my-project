@@ -1,14 +1,30 @@
 import React from 'react';
-import { HeaderMenuPropsType } from '../../Header';
 import {S} from '../HeaderMenu_Styles';
 
-const Menu: React.FC<HeaderMenuPropsType> = (props: HeaderMenuPropsType) => {
+const menuItems = [
+  {
+    title: 'Home',
+    href: 'home'
+  },
+  {
+    title: 'Work',
+    href: 'work'
+  },
+  {
+    title: 'Contact',
+    href: 'contact'
+  },
+];
+
+const Menu: React.FC= () => {
   return (
     <ul>
-      {props.menuItems.map((item, id) => {
+      {menuItems.map((item, id) => {
         return (
           <li key={id}>
-            <S.Link href="">{item}</S.Link>
+            <S.NavLink to={item.href} smooth={true} activeClass="active" spy={true}>
+              {item.title}
+              </S.NavLink>
           </li>
         );
       })}

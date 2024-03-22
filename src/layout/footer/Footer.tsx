@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
     <S.Footer>
       <Container>
         <FlexWrapper justify='space-between' align='center' wrap='wrap-reverse' gap='35px'>
-          <S.Copyright>Made by <span>Your Name</span> — Copyright 2021</S.Copyright>
+          <S.Copyright>Made by <span>Your Name</span> — Copyright 2024</S.Copyright>
           <S.SocialList>
 
             {socialItemsData.map((s, index) => {

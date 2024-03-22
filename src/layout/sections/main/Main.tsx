@@ -9,7 +9,7 @@ import Typewriter from 'typewriter-effect';
 
 const Main: React.FC = () => {
   return (
-    <S.Main>
+    <S.Main id='home'>
       <Container>
         <FlexWrapper align='center' justify='space-between' wrap='wrap-reverse' height='none' gap='20px'>
           <S.Box>

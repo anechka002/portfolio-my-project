@@ -25,7 +25,7 @@ const projItemsData = [
 
 const Works: React.FC = () => {
   return (
-    <S.Works>
+    <S.Works id='work'>
       <Container>
         <FlexWrapper wrap='wrap' justify='space-between' gap='16px'>
 
